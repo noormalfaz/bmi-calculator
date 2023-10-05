@@ -10,6 +10,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -21,10 +22,12 @@
             <input type="number" id="weight" placeholder="Input your weight" required>
             <p>And your height in here (CM)</p>
             <input type="number" id="height" placeholder="Input your height" required>
-            <button>Calculate BMI</button>
-            <div id="result"></div>
         </form>
+        <button onclick="hitung()">Calculate BMI</button>
+        <p><span id="result"></span><span id="text-result"></span> <span id="result2"></span><span
+                id="keterangan"></span></p>
     </div>
+
 </body>
 
 </html>
