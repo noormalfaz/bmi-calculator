@@ -19,9 +19,9 @@
         <p>Enter your weight and height below to check your BMI results</p>
         <form class="form-container">
             <p>Put your weight in here (KG)</p>
-            <input type="number" id="weight" placeholder="Input your weight" required>
+            <input type="number" id="weight" minlength="1" placeholder="Input your weight" required>
             <p>And your height in here (CM)</p>
-            <input type="number" id="height" placeholder="Input your height" required>
+            <input type="number" id="height" minlength="1" placeholder="Input your height" required>
         </form>
         <button onclick="hitung()">Calculate BMI</button>
         <p><span id="result"></span><span id="text-result"></span> <span id="result2"></span><span
