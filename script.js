@@ -14,26 +14,30 @@ const hitung = () => {
     let kesimpulan = rumus.toFixed(1);
 
     if (berat && tinggi != "") {
-        if (rumus <= 18.5) {
-            result.innerHTML = "Your BMI is ";
-            textResult.innerText = kesimpulan;
-            result2.innerText = "which means You are ";
-            keterangan.innerText = "Underweight";
-        } else if (rumus <= 24.9) {
-            result.innerHTML = "Your BMI is ";
-            textResult.innerText = kesimpulan;
-            result2.innerText = "which means You are ";
-            keterangan.innerText = "Normal weight";
-        } else if (rumus <= 29.9) {
-            result.innerHTML = "Your BMI is ";
-            textResult.innerText = kesimpulan;
-            result2.innerText = "which means You are ";
-            keterangan.innerText = "Overweight";
+        if (berat < 1 || berat.indexOf(".") !== -1 || tinggi < 1 || tinggi.indexOf(".") !== -1) {
+            result.innerHTML = "Inputted weight and height of at least 1!"
         } else {
-            result.innerHTML = "Your BMI is ";
-            textResult.innerText = kesimpulan;
-            result2.innerText = "which means You are ";
-            keterangan.innerText = "Obesity";
+            if (rumus <= 18.5) {
+                result.innerHTML = "Your BMI is ";
+                textResult.innerText = kesimpulan;
+                result2.innerText = "which means You are ";
+                keterangan.innerText = "Underweight";
+            } else if (rumus <= 24.9) {
+                result.innerHTML = "Your BMI is ";
+                textResult.innerText = kesimpulan;
+                result2.innerText = "which means You are ";
+                keterangan.innerText = "Normal weight";
+            } else if (rumus <= 29.9) {
+                result.innerHTML = "Your BMI is ";
+                textResult.innerText = kesimpulan;
+                result2.innerText = "which means You are ";
+                keterangan.innerText = "Overweight";
+            } else if (rumus > 30) {
+                result.innerHTML = "Your BMI is ";
+                textResult.innerText = kesimpulan;
+                result2.innerText = "which means You are ";
+                keterangan.innerText = "Obesity";
+            }
         }
     } else {
         result.innerHTML = "Input your weight and your height!"
